@@ -1,0 +1,198 @@
+/* Need to add nomarilize css to fix css across all browsers,
+acting strange in Safari */
+
+/* Mobile First Appoarch Base Style */
+
+/* Using Bootstrap a lot for this web app, so many of these classes
+are no longer being used as often as they used to.  */
+/*************************************
+  LINKS and TEXT
+**************************************/
+.no-underline {
+  text-decoration: none !important;
+}
+.links-dark {
+  color: #FFF !important;
+}
+.links-dark:hover,
+.links-light:hover,
+.links-dark:active,
+.links-light:active {
+  color: #A9A9A9 !important;
+}
+.links-light {
+  color: #32a1ce !important;
+}
+
+/*************************************
+  NAVIGATION
+**************************************/
+
+.navbar {
+  background: linear-gradient(to right, transparent, #fff),
+      url("../img/youtube_banner.jpg") !important;
+  background-size:     cover !important;                      /* <------ */
+  background-repeat:   no-repeat !important;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+nav .logo {
+  /* put nice font here */
+  font-family: sans-serif;
+}
+.nav_list {
+  width: 100;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px; /* Safari was putting padding here */
+  list-style: none;
+}
+.nav_list li {
+  background-color: #32a1ce;
+  width: 100%;
+}
+.nav_list a {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  border: .25rem solid #32a1ce;
+  color: #fff;
+}
+
+/*************************************
+  BODY AND CONTAINER
+**************************************/
+
+.container {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.content {
+  /* not using currently */
+}
+.title {
+  text-align: center;
+  border: .25rem solid #32a1ce;
+  font-size: 2rem;
+}
+.header,
+.title {
+  margin-top: 15px;
+}
+.header {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.screenshot,
+.description {
+  text-align: center;
+}
+.screenshot img{
+  width: 80%;
+  border-radius: 40%;
+  border: double .50rem #32a1ce;
+}
+
+/*************************************
+  FOOTER
+**************************************/
+
+/* Used to keep footer down on bottom - sticky footer */
+.push {
+  min-height: calc(100vh - 140px);
+}
+.footer {
+  position: absolute;
+  bottom: auto;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: auto;
+  margin-top: 10px;
+  background-color: #f5f5f5;
+}
+
+/*************************************
+  MEDIA QUERIES
+**************************************/
+
+@media (min-width: 416px) {
+
+  .container {
+    max-width: 1000px;
+  }
+  .nav_list li,
+  .nav_list li a {
+    width: auto;
+  }
+  nav {
+    padding-left: .5em;
+    padding-right: .5em;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  nav .logo {
+    flex-grow: 2;
+  }
+  .nav_list {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  .nav_list li {
+    background-color: #32a1ce;
+    padding: .5em;
+  }
+  .nav_list li a {
+    justify-content: space-around;
+  }
+  .title {
+    font-size: 4rem;
+  }
+  .header {
+    flex-direction: row;
+  }
+  .screenshot {
+    max-width: 300px;
+  }
+  .description {
+  }
+}
+
+@media (min-width: 740px) {
+  .main-text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .col {
+    flex: 1 50%;
+  }
+  .col p {
+    padding: 4px;
+  }
+  .tritary {
+    order: 2;
+  }
+}
+
+@media (min-width: 1100px) {
+  .primary {
+    flex: 1 30%;
+  }
+  .secondary {
+    flex: 1 40%;
+  }
+  .tritary {
+    flex: 1 25%;
+  }
+}

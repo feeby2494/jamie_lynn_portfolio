@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  .row
+    div(class="title d-flex w-100 justify-content-center")
+      h1(class="display-3") Contact
+  div(class="row")
+    .col-6
+      img(class="img-fluid ", width="500", src=contact_info.img_path , alt=contact_info.img_alt)
+    div(class="col-6 mt-5")
+      ul(class="list-group")
+        li(class="list-group")
+          p(class="") Name: #{contact_info.name}
+        li(class="list-group list-group-item-info")
+          p(class="") Location: #{contact_info.name}
+        li(class="list-group")
+          p(class="") main_email: #{contact_info.name}
+        li(class="list-group list-group-item-info")
+          p(class="") sec_email: #{contact_info.name}
+        li(class="list-group")
+          p(class="") cell: #{contact_info.name}
+
+
+
+
+
+
+
+
+    //-
+      div(class="col-sm mt-4")
+        if name
+          h2 Welcome to my personal website, #{name}!
+        else
+          form(action='/contact', method='post')
+            label Please enter your name:
+              input(type='text', name='username')
+            button(type='submit') Submit

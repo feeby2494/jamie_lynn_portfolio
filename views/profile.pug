@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  div(class="row")
+    div(class="title d-flex w-100 justify-content-center")
+      h1(class="display-3") My Profile
+  .row
+    div(class="header d-flex flex-wrap w-100")
+      div(class="screenshot col-md-10 col-sm-12")
+        img(src="img/profile.jpg" alt="profile picture of Jamie B. Lynn")
+      div(class="description d-flex col-md col-sm-12 mt-4")
+        h3.col-xs-6 Jamie B. Lynn
+        p Front End Web Developer, Technical Specialist, Corolla Civic Restorer, International Studies Researcher
+  .row
+    //-for non-bootstrap classes main-text
+    div(class="d-flex flex-wrap mt-4")
+      //-for non-bootstrap classes primary col
+      div(class=" col-sm-12 col-md-6 col-lg-4")
+        h3 Introduction and Experience
+        p Personally, I made this project of my own to help me progress my development skill by combining my interest in hobbies with web development.
+        p I'm mildly dylexit and have problems focusing on extremely boring mundane tasks, even though I always find myself doing nothing but mundane, repetitive tasks through out the day. So after work, why would I want to study? You see my predicament.
+        p Solution is to make web development apart of my true passions by making content I'm interested in: automotive diy projects, technology, foreign cultures, travel, and Conspiracy.
+        p By developing my own content first, I can later apply what I learned to future clients whether this is home-based freelancing or working for a company.
+      //-for non-bootstrap classes tritary col
+      div(class=" col-sm-12 col-md-6 col-lg-4")
+        h3 Hobbies
+        p I love travel, hiking, computers, development, Raspberry Pi, Linux, Open Source Software, Car modifications, Conspiracy Theories, Car shows, Food, Korea, learning languages, Video making, Volunteering for sound board at church, Web sites, design, AliExpress, Ebay, Rock Auto car parts, exploring, BitCoin, documentaries, walking, Yoga, home improvement, solar panels, water filters, Mac OS X Home brew, hacking, studying, meet ups, iced coffee, youtube, Apple and Dell repair, dreaming, eating cookies, following my wife, dogs, and blogs.
+      //for non-bootstrap classes secondary col
+      div(class=" col-sm-12 col-md-6 col-lg-4")
+        h3 Skills and Motivation
+        p With a background in International Studies BA, I love to learn about new things in this world and try to improve the society around me in creative ways. I love innovation and empowerment. Web development fits me, due to my creativity and love of learning. The internet can help improve our way of life if used wisely. I want to share this with more people and do what I enjoy as a full time profession, while helping people with alsome ideas to get their project to light!
+        p What current skills do I have to help clients make web pages and apps?
+        p Here are some key ones:
+        ul(class="list")
+          each skill in skills
+            li= skill

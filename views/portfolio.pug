@@ -1,0 +1,111 @@
+extends layout
+
+block content
+  .row
+    div(class="title d-flex w-100 justify-content-center")
+      h1(class="display-3") My Portfolio
+    div(class="d-flex w-100 justify-content-center")
+      ul(class="nav w-100 mt-3")
+        li(class="nav-item col-sm-12 col-md-3")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/portfolio?id=corolla") Corolla
+        li(class="nav-item col-sm-12 col-md-3")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/portfolio?id=civic") Civic
+        li(class="nav-item col-sm-12 col-md-3")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/portfolio?id=hacking") Hacking
+        li(class="nav-item col-sm-12 col-md-3")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/portfolio?id=webdev") Web Development
+  .row
+    div(class="d-flex flex-wrap mt-4 mb-4 align-self-baseline")
+      each item in cards
+        div(class="portfolio_titles col-md-6 col-lg-4 col-xl-3 card mt-3")
+          div(class="card-header")
+            h1(class="h3") #{item.port_title}
+          div(class="card-body mt-3")
+            a(href=item.img_path)
+              if item.video
+                video(class="embed-responsive embed-responsive-16by9", poster=item.img_poster, controls="controls", preload="none")
+                  source(type="video/mp4", src=item.video_path_mp4)
+                  source(type="video/webm")
+                  source(type="video/ogg", src=item.video_path_ogv)
+                  | Your browser doesn't support HTML5 video.
+              else
+                img(class="card-img-top", src=item.img_path , alt=item.img_alt)
+            h5(class="card-title") #{item.port_title}
+            a(href=item.link_to_diy)
+              p(class="card-text") #{item.short_desc}
+
+              p(class="card-text d-none") #{item.desc}
+            button(type="button", class="btn byn-primary", data-toggle="modal", data-target="#" + item.modal_id) Full Details!
+            div(class="modal fade", id=item.modal_id, tabindex="-1", role="dialog", aria-labelledby=item.modal_title_label, aria-hidden="true")
+              div(class="modal-dialog", role="document")
+                div(class="modal-content")
+                  div(class="modal-header")
+                    h5(class="modal-title", id=item.modal_title_label) #{item.port_title}
+                    button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+                      span(aria-hidden="true") &times;
+                  div(class="modal-body")
+                    if item.video
+                      video(class="embed-responsive embed-responsive-16by9", poster=item.img_poster, controls="controls", preload="none")
+                        source(type="video/mp4", src=item.video_path_mp4)
+                        source(type="video/webm")
+                        source(type="video/ogg", src=item.video_path_ogv)
+                        | Your browser doesn't support HTML5 video.
+                    h5(class="card-title") #{item.port_title}
+                    p(class="card-text") #{item.desc}
+                    h5 More Images/DIY Steps
+                    a(href=item.img_path)
+                      img(class="card-img-top", src=item.img_path , alt=item.img_alt)
+                    p #{item.img_alt}
+                    a(href=item.img_path01)
+                      img(class="card-img-top", src=item.img_path01 , alt=item.img_alt01)
+                    p #{item.img_alt01}
+                    a(href=item.img_path02)
+                      img(class="card-img-top", src=item.img_path02 , alt=item.img_alt02)
+                    p #{item.img_alt02}
+                    a(href=item.img_path03)
+                      img(class="card-img-top", src=item.img_path03 , alt=item.img_alt03)
+                    p #{item.img_alt03}
+                    a(href=item.img_path04)
+                      img(class="card-img-top", src=item.img_path04 , alt=item.img_alt04)
+                    p #{item.img_alt04}
+                    a(href=item.img_path05)
+                      img(class="card-img-top", src=item.img_path05 , alt=item.img_alt05)
+                    p #{item.img_alt05}
+                    a(href=item.img_path06)
+                      img(class="card-img-top", src=item.img_path06 , alt=item.img_alt06)
+                    p #{item.img_alt06}
+                    a(href=item.img_path07)
+                      img(class="card-img-top", src=item.img_path07 , alt=item.img_alt07)
+                    p #{item.img_alt07}
+                  div(class="modal-footer")
+                    button(type="button", class="btn btn-secondary", data-dismiss="modal") Close
+                    button(type="button", class="btn btn-primary") Save changes
+
+          //
+            ul(class="list-group list-group-flush")
+              li(class="list-group-item") Cras justo odio
+              li(class="list-group-item") Dapibus ac facilisis in
+              li(class="list-group-item") Vestibulum at eros
+          .card-body
+            a(href="#", class="card-link links-light no-underline") Another link
+
+
+
+
+
+
+
+
+      //-
+        if name
+          h2 Welcome #{name}!
+          h3 Please review your information to verify:
+          p email: #{email}
+          p Brief Project Description: #{brief_desc}
+          p Please submit if info is correct.
+          button(type='submit') Submit
+          p Otherwise click edit to go back to change some information
+          button(type='edit') Edit
+        else
+          h2 Welcome!
+          h3 Have a look around some of our past projects and see what you like

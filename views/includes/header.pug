@@ -1,0 +1,30 @@
+header(class="")
+  nav(class="navbar navbar-expand-lg navbar-light bg-dark w-100")
+    div(class="navbar-brand col-9 d-flex flex-col" href="#")
+      a(class="links-dark d-flex flex-col no-underline", href="/")
+        img(class="d-inline-block align-topic", src="../img/jamie_logo006_green.svg", alt="personal logo of Jamie Lynn" width="40" height="40")
+        h3(class="text-muted ml-2") Jamie Lynn
+    button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+      span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse", id="navbarNav")
+      ul(class="navbar-nav")
+        // Visible for full lg and xl
+        li(class="d-none d-lg-block nav-item")
+          a(class="nav-link", href="/") Profile
+        li(class="d-none d-lg-block nav-item")
+          a(class="nav-link", href="/portfolio") Portfolio
+        li(class="d-none d-lg-block nav-item")
+          a(class="nav-link", href="/contact") Contact
+        li(class="d-none d-lg-block nav-item")
+          a(class="nav-link disabled", href="/travel") Travel
+            // span(class="badge badge-pill badge-warning") Not Done
+        // Visible for xs, sm, and md
+        li(class="d-block col-sm-12 d-lg-none nav-item")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/") Profile
+        li(class="d-block col-sm-12 d-lg-none nav-item")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/portfolio") Portfolio
+        li(class="d-block col-sm-12 d-lg-none nav-item")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/contact") Contact
+        li(class="d-block col-sm-12 d-lg-none nav-item")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/travel") Travel
+            // span(class="badge badge-pill badge-warning") Not Done

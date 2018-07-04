@@ -1,0 +1,51 @@
+{
+  "data": {
+      "title": "Portfolio",
+      "campaign": {
+        "camp_title": "An 8th Gen's Civic Lx Coupe ",
+        "img_path": "",
+        "img_alt": "",
+        "desc": "",
+        "disclaimer": ""
+
+      },
+      "port_cards": [
+        {
+          "port_title": "Greedy TI-C woes",
+          "img_path": "",
+          "img_alt": "",
+          "short_desc": "With the car lowered on Tein S-techs, the middle part of my cat-back keeps scrapping so bad on bumps that it's leaking!",
+          "desc": "With the car lowered on Tein S-techs, the middle part of my cat-back keeps scrapping so bad on bumps that it's leaking! Car is still fine, but when I start it up I hear a slight hissing noise and it's becoming annoying! Let's fix this!",
+          "modal_title_label": "exhaustScrappingLabel",
+          "modal_id": "exhaustScrapping",
+          "modal_title": "Detailed Plans for Totorolla",
+          "modal_desc": ""
+        },
+        {
+          "port_title": "JDM Karoism Styled Floor Mats!",
+          "img_path": "",
+          "img_alt": "",
+          "short_desc": "",
+          "desc": "",
+          "modal_title_label": "civicFloormatsLabel",
+          "modal_id": "civicFloormats",
+          "modal_title": "Detailed Plans for Totorolla",
+          "modal_desc": ""
+        },
+        {
+          "port_title": "Time to redo my Ghetto short ram to something more legit!",
+          "img_path": "",
+          "img_alt": "",
+          "short_desc": "Works great! No leaks and no 'lean on bank 1' code. It does touch the radiator hose, which is hot.",
+          "desc": "Works great! No leaks and no 'lean on bank 1' code. It does touch the radiator hose, which is hot. And it's a K&N filter, but it's time to show some love to my civic, plus parts are easy to find for 8th gen civics! I want a legitimate short ram intake with either gold heat tape, carbon fiber PWJDM style, or heat wrap. It needs a dry filter too. Let's go shopping and find something good and perferablly used or a 'big bang for buck' deal.",
+          "modal_title_label": "plansTotorollaLabel",
+          "modal_id": "plansTotorolla",
+          "modal_title": "Detailed Plans for Totorolla",
+          "modal_desc": ""
+        }
+      ],
+      "etc": {
+        "null": "null"
+      }
+    }
+}

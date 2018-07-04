@@ -1,0 +1,62 @@
+{
+  "data": {
+      "title": "Portfolio",
+      "campaign": {
+        "camp_title": "Make This Corolla Great Again!",
+        "img_path": "",
+        "img_alt": "",
+        "desc": "Our Corolla is old, outdated, not fresh, and it's time to revive Our Corolla Again! We will start with maintence for old cars, preventative maintence, styling, and performance optimaization to make this Corolla not only restored to it's former glory, but to make it the Best Corolla Ever! Make this Corolla Great Again! God Bless 8th Gen Corollas!",
+        "disclaimer": "Corollas, or any other car for that matter, has no religious affliation. This is just to get religious people on board with this campaign. Corolla was already a great car before I even bought it, so I'm not making it great again. This is just to get negative people on board with this campaign. All campaigns are utter bull**** to mislead the public and this campaign is no exception. This campaign is not libel and has no US Nationalistic affliation. This campaign is all about Corollalistic Principles(worshipping the Toyota Corolla as the Golden Car) and aims at destroying all other Non-Toyotas, while making everyone worldwide own Toyota Corollas in a very authoritrian manner, while refering to this as Democracy or Capitalism or Socialism(whatever you think is fair and free for all). This is an Evil Conspiracy to control the world using Toyota Corollas posed as a friendly and peaceful Elementary, over-simplified, dumbed-down, Media-friendly, teachable-in-public-schools, and misleading-the-general-public material. Put it on TV, put it in a history textbook, in a pop song, and in any Hollywood movie!!! Brainwashing for all!!! Yeah, I know! Hi, bad*ss NSA mofos! Thank you for visiting my website! Have any openings for an entry level web developer? Happy Hacking!"
+
+      },
+      "port_cards": [
+        {
+          "port_title": "Walmart Floor Mats DIY!",
+          "img_path": "/img/walmart_floormats02.jpg",
+          "img_alt": "",
+          "short_desc": "Found these custom floormats at Walmart for only $28 for a whole set! ....",
+          "desc": "Found these custom floormats at Walmart for only $28 for a whole set! I just placed my old 'holy' torn up floormats on top of these new ones, lined them up, and used a knife blade to cut to size. Plan on putting these in my car after I vacuum all the dirt and leaves! Also had to cut a hole on the driver's side so I can use the oem floormat hook. Maybe I will make a short video of me putting these in!",
+          "modal_path": "",
+          "modal_title": "",
+          "modal_name": "",
+          "modal_desc": ""
+        },
+        {
+          "port_title": "Taxi Driver Style Seat Covers!",
+          "img_path": "",
+          "img_alt": "",
+          "short_desc": "Inspired by old Taxi Ajoshies in Korea, these only costed $10 at Walmart! ....",
+          "desc": "Inspired by old Taxi Ajoshies in Korea, these only costed $10 at Walmart! Man, Walmart actually has Corolla performance parts! This will definately become a video along with a lot of negative responces calling me an 'old man, who's still a ricer.' Hey, old guys can be ricers too, can't they? I just how this makes my back feel good.",
+          "modal_path": "",
+          "modal_title": "",
+          "modal_name": "",
+          "modal_desc": ""
+        },
+        {
+          "port_title": "One Texas Corolla Walk-A-Round",
+          "img_path": "/img/Totorolla002.jpg",
+          "img_alt": "",
+          "short_desc": "One Texas desporado Cowboy here in the Wild West of Dallas, Tx. ....",
+          "desc": "One Texas desporado Cowboy here in the Wild West of Dallas, Tx. Over here in the Wild West, ruled by middleaged men who drive like they just got their license yesterday in their Prenium EuroTrash, the roads are dysfunctional with so many unskilled drivers you won't want to drive anywhere, but you have to drive everywhere, because everything is so far away. But in the midst of so many crazy wild drivers, there's a group of bad *ss MoFos, who modify their cars and love diversity. In fact, Texas is perfect for car culture, no matter what you're into! Giant lifted Texas-style trucks to small Honda hatchbacks, Modern Muscell to Classic cars, Exotic to heavily modified, to clean, OEM, and Restored beuties. Texas has everything and everyone for your car projects, except MOUNTIANS!!!! AGHH!!!",
+          "modal_path": "",
+          "modal_title": "",
+          "modal_name": "",
+          "modal_desc": ""
+        },
+        {
+          "port_title": "The Corolla's ArcNemis: Honda Civic Coupe with a R18!",
+          "img_path": "",
+          "img_alt": "",
+          "short_desc": "What's better than a Corolla? Nothing! .... A R18 powered Honda Civic Coupe with sexy mods. ....",
+          "desc": "What's better than a Corolla? Nothing! .... A R18 powered Honda Civic Coupe with sexy mods. Oh... shoot! Honda Civic, the true King of modified cars. Tuning on the ease, used performance parts locally and online, sexy body to begin with, huge comunity, and a huge online DIY how-to database done by this giant comunity. It's no wonders there's so much HATE for Civics, they have everything! Pure Jealously!",
+          "modal_path": "",
+          "modal_title": "",
+          "modal_name": "",
+          "modal_desc": ""
+        }
+      ],
+      "etc": {
+        "null": "null"
+      }
+    }
+}

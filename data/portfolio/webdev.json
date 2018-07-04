@@ -1,0 +1,51 @@
+{
+  "data": {
+      "title": "Portfolio",
+      "campaign": {
+        "camp_title": "A boy's Web Development Aspirations",
+        "img_path": "",
+        "img_alt": "",
+        "desc": "",
+        "disclaimer": ""
+
+      },
+      "port_cards": [
+        {
+          "port_title": "This Express.js Node app: I'm not a real programmer... just a frontend dev learning the full stack.",
+          "img_path": "",
+          "img_alt": "",
+          "short_desc": "",
+          "desc": "",
+          "modal_title_label": "thisAppIssuesLabel",
+          "modal_id": "thisAppIssues",
+          "modal_title": "Detailed Plans for Totorolla",
+          "modal_desc": ""
+        },
+        {
+          "port_title": "Plans for this web project",
+          "img_path": "",
+          "img_alt": "",
+          "short_desc": "",
+          "desc": "",
+          "modal_title_label": "thisAppPlansLabel",
+          "modal_id": "thisAppPlans",
+          "modal_title": "Detailed Plans for Totorolla",
+          "modal_desc": ""
+        },
+        {
+          "port_title": "My next project after this: Storefront web app (with a shopping cart)",
+          "img_path": "",
+          "img_alt": "",
+          "short_desc": "",
+          "desc": "",
+          "modal_title_label": "storeWebAppLabel",
+          "modal_id": "storeWebApp",
+          "modal_title": "Detailed Plans for Totorolla",
+          "modal_desc": ""
+        }
+      ],
+      "etc": {
+        "null": "null"
+      }
+    }
+}

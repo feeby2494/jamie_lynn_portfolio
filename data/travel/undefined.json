@@ -1,0 +1,41 @@
+{
+  "data": {
+    "trav_cards": [
+      {
+        "title": "Subaru Touge nearby Fukuoka, Japan",
+        "location": "Fukuoka, Japan",
+        "video": true,
+        "poster": "/img/fukuoka_touge/subaru_touge_car_side.jpg",
+        "video_path_mp4": "video/fukuoka_touge.mp4",
+        "video_path_ogv": "video/fukuoka_touge.ogv",
+        "img_path": "",
+        "img_alt": "Subaru STi doing Touge nearby Fukuoka, Japan",
+        "desc": "Subaru STi doing Touge nearby Fukuoka, Japan."
+      },
+      {
+        "title": "Trip to the Tuning Shop",
+        "location": "Fukuoka, Japan",
+        "video": false,
+        "img_path": "/img/fukuoka_touge/suzuki_kei_01.jpg",
+        "img_alt": "Suzuki Kei car in local tuning store in Fukuoka Japan",
+        "desc": "Cute little Kei car made by Suzuki in the local tuning store."
+      },
+      {
+        "title": "Interior shot of the little Suzuki",
+        "location": "Fukuoka, Japan",
+        "video": false,
+        "img_path": "/img/fukuoka_touge/suzuki_kei_02.jpg",
+        "img_alt": "Interior picture of the Suzuki Kei car in local tuning store in Fukuoka Japan",
+        "desc": "Inside this cute little Suzuki Kei car."
+      },
+      {
+        "title": "A White Suzuki Kei car",
+        "location": "Fukuoka, Japan",
+        "video": false,
+        "img_path": "/img/fukuoka_touge/suzuki_kei_03.jpg",
+        "img_alt": "White Suzuki Kei car in local tuning store in Fukuoka Japan",
+        "desc": "Another Suzuki Kei car, this one white."
+      }
+    ]
+  }
+}

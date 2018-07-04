@@ -3,7 +3,8 @@ extends layout
 block content
   .row
     div(class="title d-flex w-100 justify-content-center")
-      h1(class="display-3") Contact
+      h1(class="display-3 d-none d-sm-block") Contact
+      h1(class="h4 d-block d-sm-none") Contact
   div(class="row")
     .col-6
       img(class="img-fluid ", width="500", src=contact_info.img_path , alt=contact_info.img_alt)

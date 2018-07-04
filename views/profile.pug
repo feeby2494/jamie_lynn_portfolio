@@ -1,9 +1,10 @@
 extends layout
 
 block content
-  div(class="row")
+  .row
     div(class="title d-flex w-100 justify-content-center")
-      h1(class="display-3") My Profile
+      h1(class="display-3 d-none d-sm-block") Profile
+      h1(class="h4 d-block d-sm-none") Profile
   .row
     div(class="header d-flex flex-wrap w-100")
       div(class="screenshot col-md-10 col-sm-12")

@@ -23,12 +23,14 @@ const profileRoutes = require('./routes/profile');
 const portRoutes = require('./routes/portfolio');
 const travelRoutes = require('./routes/travel');
 const contactRoutes = require('./routes/contact');
+const signup = require('./routes/signup');
 
 //Middleware for Routes
 app.use('/', profileRoutes);
 app.use('/portfolio', portRoutes);
 app.use('/travel', travelRoutes);
 app.use('/contact', contactRoutes);
+app.use('/signup', signup);
 
 // app.get('/data/travel_add_bottom_page.json', (req, res) => {
 //     res.json({ title: 'title', location: 'location', video: 'video', poster: 'poster', video_path_mp4: 'video_path_mp4', video_path_ogv: 'video_path_ogv', video_path_webm: 'video_path_webm', img_alt: 'img_alt', img_path: 'img_path', desc: 'desc'});

@@ -14,11 +14,11 @@ const contact_info = {
     img_alt: "Jamie's personal logo"
 };
 
-router.get('/', (req, res) => {
+router.get('/', contactGet = (req, res) => {
   res.render('contact', { name: req.cookies.username, contact_info});
 });
 
-router.post('/', (req, res) => {
+router.post('/', contactPost = (req, res) => {
   console.dir(req.body);
   res.cookie('username', req.body.username);
   res.render('contact', {name: req.body.username });

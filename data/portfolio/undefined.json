@@ -11,7 +11,7 @@
       },
       "port_cards": [
         {
-          "port_title": "7th Gen Corolla OBX AxelBack on an 8th gen!",
+          "port_title": "Honda Civic HX wheel swap",
           "link_to_diy": "/portfolio?id=corolla&link=corollaDIY",
           "img_path": "",
           "img_alt": "",
@@ -29,8 +29,8 @@
           "img_alt06": "",
           "img_path07": "",
           "img_alt07": "",
-          "short_desc": "I have been eyeing ebay listings for the OBX 1994-1997 axleback muffler. It looks like it fits the 8th gen too!",
-          "desc": "I have been eyeing ebay listings for the OBX 1994-1997 axleback muffler. It looks like it fits the 8th gen too! At a pic-n-pull I tried to test fit the oem 7th gen muffler onto an 8th gen. It was pretty close, except the 7th gen had a smaller diameter and the bolt hole on the flange would need to be drilled out a little more. Howerver, the OBX unit will have a bigger diameter and flange! This should work!",
+          "short_desc": "After looking on OfferUp for some cheap Civic HX wheels, I came across a pair of these!",
+          "desc": "These wheels are crazy light weight and made by Enkei for Honda. I beleive they weigh only 11 lbs! And I found numerous people online who have sanded and polised the paint off the lip, which is the look I'm going for!",
           "modal_title_label": "plansTotorollaLabel",
           "modal_id": "plansTotorolla",
           "modal_title": "Detailed Plans for Totorolla",
@@ -52,8 +52,10 @@
         {
           "port_title": "One Texas Corolla Walk-A-Round",
           "img_path": "",
-          "video": true,
-          "video_path_mp4": "/video/corolla_walkaround.mp4",
+          "video": false,
+          "iframe": true,
+          "iframe_src": "https://www.youtube.com/embed/NXlF4Oa99e4",
+          "video_path_mp4": "",
           "video_path_ogv": "",
           "video_path_webm": "",
           "img_poster": "/img/Totorolla002.jpg",

@@ -1,54 +1,75 @@
 const express = require('express');
 const router = express.Router();
+const MongoClient = require('mongodb').MongoClient;
 
-const selected_json = '../data/portfolio_cards.json';
-const data = require(selected_json).data;
-const cards = data.port_cards; // cosnt cards = data.port_cards;
-const campaign = data.campaign; //const { campaign } = data;
-const title = data.title; //cosnt { title } = data;
-const url = require('url');
+// setup database with MongoClient
+MongoClient.connect('mongodb://feeby2494:mj1268"Samdasu@ds115263.mlab.com:15263/totorolla', (err, client) => {
+  if (err) {
+    return console.error(err);
+  }
+  const db = client.db('totorolla');
 
-router.get('/scsc', (req, res) => {
-  res.render('portfolio', {title: title, cards: cards, campaign: campaign, id});
-});
+  // setting up querystrings
+  router.get('/', (req, res, next) => {
+    let id = req.query.id;
+    if (id === undefined){
+      res.redirect('/portfolio/corolla');
+    }
+    // console.log(id);
+    next();
+  });
 
-router.get('/', (req, res) => {
-  let id = req.query.id;
-  // if (id === undefined){
-  //   return id = "corolla";
-  // }
-  console.log(id);
+  router.get('/corolla', (req, res) => {
+    db.collection('corolla').find().toArray((err, result) => {
+      if(err) {
+        const err = new Error('Can\'t get info from database!');
+        err.status = 400;
+        return next(err);
+      }
+      // res.send('<p>some html</p>');
+      res.render('portfolio', {title: "Corolla", cards: result});
+    });
+  });
 
-  const selected_json = '../data/portfolio/' + id + '.json';
-  console.log(selected_json);
-  const data = require(selected_json).data;
-  const cards = data.port_cards; // cosnt cards = data.port_cards;
-  const campaign = data.campaign; //const { campaign } = data;
-  const title = data.title; //cosnt { title } = data;
+  router.get('/civic', (req, res) => {
+    db.collection('civic').find().toArray((err, result) => {
+      if(err) {
+        const err = new Error('Can\'t get info from database!');
+        err.status = 400;
+        return next(err);
+      }
+      res.render('portfolio', {title: "Civic", cards: result});
+    });
+  });
 
-  res.render('portfolio', {title: title, cards: cards, campaign: campaign});
-});
+  router.get('/hacking', (req, res) => {
+    db.collection('hacking').find().toArray((err, result) => {
+      if(err) {
+        const err = new Error('Can\'t get info from database!');
+        err.status = 400;
+        return next(err);
+      }
+      res.render('portfolio', {title: "Hacking", cards: result});
+    });
+  });
 
+  router.get('/webdev', (req, res) => {
+    db.collection('webdev').find().toArray((err, result) => {
+      if(err) {
+        const err = new Error('Can\'t get info from database!');
+        err.status = 400;
+        return next(err);
+      }
+      res.render('portfolio', {title: "WebDev", cards: result});
+    });
+  });
 
-
-// router.get('/:id' (req, res) => {
-//   res.render('portfolio', {
-//     popup_text: cards[req.params.id].desc,
-//     popup_image: cards[req.params.id].popup_img_array
-//   });
-// });
-
-// router.get('/portfolio', (req, res) => {
-//   res.render('portfolio');
-// });
-
-router.post('/', (req, res) => {
-
-
-  res.cookie('username', req.body.name);
-  res.cookie('email', req.body.email);
-  res.cookie('description', req.body.brief_desc);
-  res.render('portfolio', { title: req.cookies.username, email: req.cookies.email, brief_desc: req.cookies.brief_desc });
+  router.post('/', (req, res) => {
+    res.cookie('username', req.body.name);
+    res.cookie('email', req.body.email);
+    res.cookie('description', req.body.brief_desc);
+    res.render('portfolio', { title: req.cookies.username, email: req.cookies.email, brief_desc: req.cookies.brief_desc });
+  });
 });
 
 module.exports = router;

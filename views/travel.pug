@@ -6,55 +6,32 @@ block content
     div(class="title d-flex w-100 justify-content-center")
       h1(class="display-3 d-none d-sm-block") My Travels
       h1(class="h4 d-block d-sm-none") My Travels
-  .row
-      div(class="d-flex w-100 justify-content-center")
+    div(class="d-flex w-100 justify-content-center")
       ul(class="nav w-100 mt-3")
-        each option in options
-          li(class="nav-item col-sm-12 col-md-3")
-            a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/travel?id=" + option) #{option}
-        //
-          label(for="") Select a Travel Memory
-          select(class="")
-            each memory in options.trip
-              option=memory.memoryId
-          button(type="button", class="btn byn-primary", data-toggle="memory", data-target="#" + data.trip.memoryQueryStr) Go To Travel Memory!
-  div(class="row mt-3 ")
-    each card in data.trav_cards
-      div(class="portfolio_titles col-md-6 col-lg-4 card mt-3")
-        div(class="card-header")
-          h1(class="h3") #{card.title}
-        if card.video
-          video(width="320", height="240", poster="card.poster", controls="controls", preload="none")
-            source(type="video/mp4", src=card.video_path_mp4)
-            source(type="video/webm")
-            source(type="video/ogg", src=card.video_path_ogv)
-            | Your browser doesn't support HTML5 video.
-        img(class="card-img-top", src=card.img_path , alt=card.img_alt )
-        div(class="card-body mt-3")
-          h5(class="card-title") #{card.title}
-          p(class="card-text") #{card.desc}
-  div(id="load_more", class="row mt-3")
-  script(src="/js/post_travel_pics.js", type="text/javascript")
+        li(class="nav-item col-sm-12 col-md-3")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/travel/korea") Korea
+        li(class="nav-item col-sm-12 col-md-3")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/travel/japan") Japan
+        li(class="nav-item col-sm-12 col-md-3")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/travel/uk") UK
+        li(class="nav-item col-sm-12 col-md-3")
+          a(class="nav-link d-flex w-100 justify-content-center bg-light text-dark border", href="/travel/usa") USA
 
-
-
-        //-
-          div(class="row")
-            div(class="d-flex flex-wrap mt-4 mb-4 align-self-baseline")
-              each card in travel_cards
-                div(class="portfolio_titles col-sm-6 col-md-4 col-lg-3 card mt-3")
-                  div(class="card-header")
-                    h1(class="h3") #{card.title}
-                  img(class="card-img-top", src=card.img_path , alt=card.img_alt )
-                  div(class="card-body mt-3")
-                    h5(class="card-title") #{card.title}
-                    p(class="card-text") #{card.desc}
-
-          //
-            ul(class="list-group list-group-flush")
-              li(class="list-group-item") Cras justo odio
-              li(class="list-group-item") Dapibus ac facilisis in
-              li(class="list-group-item") Vestibulum at eros
-          .card-body
-            a(href="#", class="card-link links-light no-underline") Card link
-            a(href="#", class="card-link links-light no-underline") Another link
+  .row.mt-3
+    div(class="d-flex flex-wrap mt-4 mb-4 align-self-baseline")
+      each item in cards
+        div(class="portfolio_titles col-md-6 col-lg-4 card mt-3")
+          div(class="card-header")
+            h1(class="h3") #{item.port_title}
+          if item.video
+            video(width="320", height="240", poster="item.poster", controls="controls", preload="none")
+              source(type="video/mp4", src=item.video_path_mp4)
+              source(type="video/webm")
+              source(type="video/ogg", src=item.video_path_ogv)
+              | Your browser doesn't support HTML5 video.
+          img(class="card-img-top", src=item.img_path , alt=item.img_alt )
+          div(class="card-body mt-3")
+            h5(class="card-title") #{item.port_title}
+            p(class="card-text") #{item.desc}
+    div(id="load_more", class="row mt-3")
+    script(src="/js/post_travel_pics.js", type="text/javascript")

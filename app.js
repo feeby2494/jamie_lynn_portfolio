@@ -11,6 +11,7 @@ var port = process.env.PORT || 8080;
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'data')));
+
 //app.get()
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cookieParser());
@@ -52,12 +53,12 @@ app.listen(port, () => {
 // res.render('portfolio', {title: title, cards: result});
 
 
-// //Error Middleware
-// app.use((req, res, next) => {
-//   const err = new Error('Not Found');
-//   err.status = 404;
-//   next(err);
-// });
+//Error Middleware
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
 
 app.use((err, req, res, next) => {
 res.locals.error = err;

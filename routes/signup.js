@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-var bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const userData = require('../models/user');
 const MongoClient = require('mongodb').MongoClient; // need this!
 
@@ -8,17 +8,16 @@ const hashCount = 10;
 
 
 // setup database with MongoClient
-MongoClient.connect('mongodb://feeby2494:mj1268"Samdasu>@ds115263.mlab.com:15263/totorolla', (err, client) => {
+MongoClient.connect("mongodb://admin:mj1268Alizee@ds115193.mlab.com:15193/totorolla", (err, client) => {
   if (err) {
-    const err = new Error('Mondo DB connection error');
-    err.status = 400;
-    return next(err);
+    return console.error(err);
   }
   const db = client.db('totorolla');
 
-  // GET /signup
+  // GET /signup how in the hell is this a 404?
   router.get('/', (req, res, next) => {
     return res.render('signup', { title: 'Sign Up'  });
+    console.log('This signup route works');
   });
 
   // POST /signup
@@ -57,7 +56,7 @@ MongoClient.connect('mongodb://feeby2494:mj1268"Samdasu>@ds115263.mlab.com:15263
               }
               userData.password = hash;
               console.log('saved to database');
-              db.collection('users').save(userData);
+              db.collection('users').save(userData); // collection.save is deprecated. Use insertOne, insertMany, updateOne, or updateMany instead.
               // res.redirect('/?user=' + userData.name);
             });
 

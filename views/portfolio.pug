@@ -47,6 +47,7 @@ block content
                     button(type="button", class="close", data-dismiss="modal", aria-label="Close")
                       span(aria-hidden="true") &times;
                   div(class="modal-body")
+
                     if item.iframe
                       iframe(class="embed-responsive embed-responsive-16by9", src=item.iframe_src, frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
                     if item.video
@@ -59,11 +60,17 @@ block content
                       h5(class="card-title") #{item.port_title}
                       p(class="card-text") #{item.desc}
                       h5 More Images/DIY Steps
-
-                    a(href=item.img_path)
-                      img(class="card-img-top", src=item.img_path , alt=item.img_alt)
-                    div(class="mr-4 ml-4")
-                      p #{item.img_alt}
+                    if item.userPhotos
+                       each photo in item.userPhotos
+                        h4 #{photo.alt}
+                        a(href=photo.path)
+                          img(class="card-img-top", src=photo.path , alt=photo.alt)
+                        p #{photo.desc}
+                    //
+                      a(href=item.img_path)
+                        img(class="card-img-top", src=item.img_path , alt=item.img_alt)
+                      div(class="mr-4 ml-4")
+                        p #{item.img_alt}
                     a(href=item.img_path01)
                       img(class="card-img-top", src=item.img_path01 , alt=item.img_alt01)
                     div(class="mr-4 ml-4")

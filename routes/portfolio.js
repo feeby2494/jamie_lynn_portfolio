@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 
-// setup database with MongoClient
 MongoClient.connect("mongodb://admin:mj1268Alizee@ds115193.mlab.com:15193/totorolla", (err, client) => {
-  if (err) {
-    return console.error(err);
-  }
-  const db = client.db('totorolla');
+  // setup database with MongoClient
+
+    if (err) {
+      return console.error(err);
+    }
+    const db = client.db('totorolla');
 
   // setting up querystrings
   router.get('/', (req, res, next) => {

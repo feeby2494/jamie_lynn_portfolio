@@ -7,8 +7,7 @@ MongoClient.connect('mongodb://localhost:27017', (err, client) => {
   }
   const db = client.db('totorolla');
   const corollaCards = {
-    "port_title": "Honda Civic HX wheel swap",
-    "link_to_diy": "/portfolio?id=corolla&link=corollaDIY",
+    "port_title": "Corolla in the Daylight...",
     "img_path": "",
     "img_alt": "",
     "img_path01": "",
@@ -34,6 +33,6 @@ MongoClient.connect('mongodb://localhost:27017', (err, client) => {
   };
 
 
-  db.collection('korea').save(corollaCards);
+  db.collection('corolla').save(corollaCards);
 
 });

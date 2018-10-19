@@ -29,6 +29,41 @@ MongoClient.connect("mongodb://admin:mj1268Alizee@ds115193.mlab.com:15193/totoro
     });
   });
 
+  router.get('/japan', (req, res) => {
+    db.collection('japan').find().toArray((err, result) => {
+      if(err) {
+        const err = new Error('Can\'t get info from database!');
+        err.status = 400;
+        return next(err);
+      }
+      // res.send('<p>some html</p>');
+      res.render('travel', {title: "Japan", cards: result});
+    });
+  });
+
+  router.get('/uk', (req, res) => {
+    db.collection('uk').find().toArray((err, result) => {
+      if(err) {
+        const err = new Error('Can\'t get info from database!');
+        err.status = 400;
+        return next(err);
+      }
+      // res.send('<p>some html</p>');
+      res.render('travel', {title: "UK", cards: result});
+    });
+  });
+
+  router.get('/usa', (req, res) => {
+    db.collection('usa').find().toArray((err, result) => {
+      if(err) {
+        const err = new Error('Can\'t get info from database!');
+        err.status = 400;
+        return next(err);
+      }
+      // res.send('<p>some html</p>');
+      res.render('travel', {title: "USA", cards: result});
+    });
+  });
 
   // Old stuff
   // router.get('/', (req, res) => {
